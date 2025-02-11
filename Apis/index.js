@@ -114,6 +114,9 @@ app.post("/api/logout", (req, res) => {
 app.get("/api/user", authenticateToken, (req, res) => {
   res.json({ email: req.user.email });
 });
+app.get("/",(req,res)=>{
+  res.send('Hello Welcome to PPP Server')
+})
 app.listen(5000, () => {
   ConnectDb();
   console.log("Listening on Port:5000");
