@@ -1,0 +1,12 @@
+.align-middle {
+    vertical-align: middle;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}body{
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
