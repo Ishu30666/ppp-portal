@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import { AxiosApiClient } from "../AxiosConstants/axiosInstance";
-import { LogoutRoutes } from "../AxiosConstants/constant";
 import { useNavigate } from "react-router-dom";
 import PPPLOGO from "../Assets/ppp.jpg";
 
@@ -12,18 +10,8 @@ const Dashboard = () => {
     const [isPension, setIsPension] = useState(false); 
 
     const OnLogoutHandler = async () => {
-        try {
-            const response = await AxiosApiClient.post(LogoutRoutes, {}, { withCredentials: true });
-            if (response.status === 200) {
-                toast.success(response.data.message);
-                localStorage.removeItem("isLoggedIn", "false");
-                navigate("/");
-            }
-        } catch (error) {
-            console.log(error);
-        }
+       localStorage.removeItem("isLoggedIn","false")
     }
-
     const PPPHandler = () => {
         setIsPPPVisible(true);
         setIsPension(false);
