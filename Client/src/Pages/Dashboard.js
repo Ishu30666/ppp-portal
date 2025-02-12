@@ -33,7 +33,7 @@ const Dashboard = () => {
         <div className="flex flex-col md:flex-row h-screen">
             <aside className="w-full md:w-64 bg-gray-800 text-white p-4 md:fixed h-full">
                 <div className="flex items-center justify-center mb-6">
-                    <img src="https://flowbite.com/docs/images/logo.svg" alt="Flowbite Logo" className="h-8" />
+                    <img src="https://img.icons8.com/?size=100&id=103413&format=png&color=000000" alt="Flowbite Logo" className="h-8" />
                     <span className="ml-3 text-2xl font-semibold hidden md:block">BitePrint</span>
                 </div>
                 <ul className="space-y-4">
