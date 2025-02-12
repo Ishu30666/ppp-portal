@@ -47,8 +47,6 @@ const Login = () => {
 
         if (valid) {
             try {
-      
-
                 if (email === process.env.REACT_APP_EMAIL && password === process.env.REACT_APP_PASSWORD) {
                     localStorage.setItem('isLoggedIn', 'true');
                     navigate('/privateRoutes/Dashboard');
@@ -62,21 +60,21 @@ const Login = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="flex justify-center p-5 items-center min-h-screen bg-gray-100">
             <ToastContainer />
             <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
-            <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
+            <h2 className="text-2xl font-semibold text-center text-gray-400 mb-6">
                     PPP Print Portal
                 </h2>
                 <form onSubmit={OnSubmitHandler}>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-500">
                             Email
                         </label>
                         <input
                             type="email"
                             id="email"
-                            className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -84,13 +82,13 @@ const Login = () => {
                         {emailError && <p className="text-red-500 text-xs">{emailError}</p>}
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="password" className="block text-sm font-medium text-gray-500">
                             Password
                         </label>
                         <input
                             type="password"
                             id="password"
-                            className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
@@ -100,7 +98,7 @@ const Login = () => {
 
                     <button
                         type="submit"
-                        className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full py-2 px-4 bg-red-600 text-white rounded-lg hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         Login
                     </button>
