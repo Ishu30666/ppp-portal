@@ -65,8 +65,8 @@ const Login = () => {
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <ToastContainer />
             <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
-                <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
-                    Login
+            <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">
+                    PPP Print Portal
                 </h2>
                 <form onSubmit={OnSubmitHandler}>
                     <div className="mb-4">
@@ -104,7 +104,6 @@ const Login = () => {
                     >
                         Login
                     </button>
-                    <p>You Don't have an Account <Link to="/Register" className='text-blue-500'>Create Account</Link></p>
                 </form>
             </div>
         </div>
